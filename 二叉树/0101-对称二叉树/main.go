@@ -8,7 +8,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-//算法思路
+// 算法思路
 // 1.通过DFS从上往下走传递状态
 // 2.判断对称状态
 func isSymmetric(root *TreeNode) bool {
@@ -36,11 +36,22 @@ func main() {
 		Val: 1,
 		Left: &TreeNode{
 			Val: 2,
+			Left: &TreeNode{
+				Val: 3,
+			},
+			Right: &TreeNode{
+				Val: 4,
+			},
 		},
 		Right: &TreeNode{
 			Val: 2,
+			Left: &TreeNode{
+				Val: 4,
+			},
+			Right: &TreeNode{
+				Val: 3,
+			},
 		},
 	}
 	fmt.Println(isSymmetric(root))
-
 }

@@ -10,7 +10,6 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-
 func isValidBST(root *TreeNode) bool {
 	var dfs func(node *TreeNode, lower, upper int64) bool
 	dfs = func(node *TreeNode, lower, upper int64) bool {

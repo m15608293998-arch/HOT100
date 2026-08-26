@@ -10,7 +10,7 @@ func main() {
 	if len(queue) > 0 {
 		front := queue[0]
 		queue = queue[1:]
-		fmt.Printf("出队:%d\n",front)
+		fmt.Printf("出队:%d\n", front)
 	}
 	fmt.Println(queue)
 

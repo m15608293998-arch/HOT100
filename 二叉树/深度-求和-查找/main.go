@@ -21,6 +21,7 @@ func maxdepth(root *BinaryTree) int {
 	return rightdepth + 1
 
 }
+
 // 返回树中所有节点的值
 func treeSum(root *BinaryTree) int {
 	if root == nil {
@@ -28,22 +29,23 @@ func treeSum(root *BinaryTree) int {
 	}
 	leftsum := treeSum(root.Left)
 	rightsum := treeSum(root.Right)
-	return root.Val + leftsum +rightsum
+	return root.Val + leftsum + rightsum
 
 }
+
 // 返回树中值为 target 的节点；找不到则返回 nil
 func findNode(root *BinaryTree, target int) *BinaryTree {
 	if root.Val == target {
 		return root
-	}else {
+	} else {
 		return nil
 	}
-	lefnode := findNode(root.Left,target) 
+	lefnode := findNode(root.Left, target)
 	if lefnode != nil {
 		return lefnode
 	}
-	return findNode(root.Right,target)
-	
+	return findNode(root.Right, target)
+
 }
 
 func main() {

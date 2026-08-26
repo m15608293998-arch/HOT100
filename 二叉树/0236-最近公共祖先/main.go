@@ -7,6 +7,7 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
+
 // 算法思路
 // 1.首先一定明确这个内部的辅助DFS在干什么：返回当前子树中是否存在p/q,如果二者都不存在那么返回nil
 // 2.明晰在这个样的dfs中，边界条件是什么
@@ -34,14 +35,14 @@ type TreeNode struct {
 // 		return nil
 // 	}
 // 	return dfs(root)
-	
+
 // }
 func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	if root == nil || root == p || root == q {
 		return root
-	}  
-	left := lowestCommonAncestor(root.Left,p,q)
-	right := lowestCommonAncestor(root.Right,p,q)
+	}
+	left := lowestCommonAncestor(root.Left, p, q)
+	right := lowestCommonAncestor(root.Right, p, q)
 	if left != nil && right != nil {
 		return root
 	}

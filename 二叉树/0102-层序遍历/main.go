@@ -9,9 +9,9 @@ type TreeNode struct {
 }
 
 func levelOrder(root *TreeNode) [][]int {
-	 if root == nil{
-        return [][]int{}
-    }
+	if root == nil {
+		return [][]int{}
+	}
 	result := make([][]int, 0)
 	queue := []*TreeNode{root}
 	for len(queue) > 0 {

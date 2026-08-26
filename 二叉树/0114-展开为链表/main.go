@@ -41,9 +41,6 @@ func flatten(node *TreeNode) {
 	tail.Right = rightChain
 }
 
-
-
-
 func main() {
 	root := &TreeNode{
 		Val: 1,
@@ -69,4 +66,3 @@ func main() {
 	}
 	println()
 }
-
