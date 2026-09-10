@@ -8,6 +8,7 @@ type BinaryTree struct {
 	Right *BinaryTree
 }
 
+// 算法思路：自顶向下递减，每进一层就把 targetSum 减去当前节点值，走到叶子时判断剩余值是否恰好等于叶子的值
 func hasPathSum(root *BinaryTree, targetSum int) bool {
 	if root == nil {
 		return false

@@ -8,6 +8,7 @@ type BinaryTree struct {
 	Right *BinaryTree
 }
 
+// 算法思路：递归求左右子树深度，取较大者 +1（空节点深度为 0）
 func maxdepth(root *BinaryTree) int {
 	if root == nil {
 		return 0
@@ -23,6 +24,7 @@ func maxdepth(root *BinaryTree) int {
 }
 
 // 返回树中所有节点的值
+// 算法思路：递归，子树和 = 根 + 左子树和 + 右子树和
 func treeSum(root *BinaryTree) int {
 	if root == nil {
 		return 0
@@ -34,6 +36,7 @@ func treeSum(root *BinaryTree) int {
 }
 
 // 返回树中值为 target 的节点；找不到则返回 nil
+// 算法思路：递归，先查当前节点，再查左子树，最后查右子树（注意空节点要返回 nil）
 func findNode(root *BinaryTree, target int) *BinaryTree {
 	if root.Val == target {
 		return root

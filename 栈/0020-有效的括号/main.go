@@ -31,6 +31,7 @@ import (
 
 // }
 
+// 算法思路：左括号一律入栈；遇到右括号时栈顶必须是配对的那个左括号，配对成功就弹栈；扫完后栈必须为空才算合法
 func isStack(s string) bool {
 	stack := make([]byte, 0)
 	mapRule := map[byte]byte{

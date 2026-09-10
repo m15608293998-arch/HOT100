@@ -5,6 +5,7 @@ import (
 	"sort"
 )
 
+// 算法思路：异位词排序后得到的字符串一定相同，就用这个排序后的串当作哈希表的 key 来分组
 func groupAnagrams(strs []string) [][]string {
 	groups := make(map[string][]string)
 	for _, str := range strs {

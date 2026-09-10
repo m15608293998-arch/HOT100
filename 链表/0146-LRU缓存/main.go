@@ -9,6 +9,9 @@ type Node struct {
 	next  *Node
 }
 
+// 算法思路：哈希表 + 双向链表。
+// 哈希表负责 O(1) 定位节点，双向链表按访问顺序排列（最近使用的在头部、最久未用的在尾部），
+// 每次 Get/Put 命中都移到头部，容量满时淘汰尾部节点
 type LRUCache struct {
 	capacity int
 	cache    map[int]*Node

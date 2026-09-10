@@ -8,6 +8,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// 算法思路：BFS。每轮先记下当前队列长度，只处理这一层的节点，处理时把下一层节点追加到队尾
 func levelOrder(root *TreeNode) [][]int {
 	if root == nil {
 		return [][]int{}

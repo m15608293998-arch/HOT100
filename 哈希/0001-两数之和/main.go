@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 算法思路：哈希表一次遍历。边走边存「值→下标」，走到 v 时只需查 target-v 是否已经出现过，避免双重循环
 func twoSum(nums []int, target int) []int {
 	seen := make(map[int]int)
 	for i, v := range nums {

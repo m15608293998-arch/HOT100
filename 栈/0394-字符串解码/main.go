@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// 算法思路：双栈。current 是当前正在拼的串，count 是待用的重复次数；
+// 遇 '[' 把 count 和已拼好的前缀分别压入两栈并清空；遇 ']' 就弹栈取出重复次数与前缀，把 current 重复后接回前缀
 func decodeString(s string) string {
 	countstack := make([]int, 0)
 	stringstack := make([]string, 0)

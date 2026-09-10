@@ -8,6 +8,7 @@ type BinaryTree struct {
 	Right *BinaryTree
 }
 
+// 算法思路：DFS 递归，按「根→左→右」的顺序访问，根在进函数时立刻记录
 func PreOrder(root *BinaryTree) []int {
 	result := make([]int, 0)
 	var dfs func(node *BinaryTree)
