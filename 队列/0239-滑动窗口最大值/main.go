@@ -12,7 +12,7 @@ func maxSlidingWindow(nums []int, k int) []int {
 	ans := []int{}
 	for i := 0;i < len(nums); i ++ {
 		for len(queue) > 0 && nums[queue[len(queue)-1]] < nums[i] {
-			queue = queue[:]
+			queue = queue[:len(queue)-1]
 		}
 			if len(queue) > 0 && queue[0] < i - k + 1  {
 				queue = queue[1:]
