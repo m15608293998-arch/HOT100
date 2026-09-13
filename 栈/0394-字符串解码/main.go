@@ -10,7 +10,7 @@ func decodeString(s string) string {
 	count := 0
 	current := ""
 	for _, v := range s {
-		if v >= '0' && v <='9' {
+		if v >= '0' && v <= '9' {
 			count = count*10 + int(v-'0')
 		} else if v == '[' {
 			countstack = append(countstack, count)

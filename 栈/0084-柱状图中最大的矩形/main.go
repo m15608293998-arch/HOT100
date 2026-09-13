@@ -1,5 +1,6 @@
 package main
-//一句话：维护一个单调递增队列，找到当前for循环i对应的柱子的左右两边第一个比它矮的柱子
+
+// 一句话：维护一个单调递增队列，找到当前for循环i对应的柱子的左右两边第一个比它矮的柱子
 func largestRectangleArea(heights []int) int {
 	heights = append(heights, 0)
 	stack := make([]int, 0)

@@ -4,20 +4,20 @@ package main
 // 右指针遇到重复字符时，左指针直接跳到该字符上次出现的下一位（跳跃式收缩，不用一格一格挪）
 func lengthOfLongestSubstring(s string) int {
 	last := make(map[byte]int)
-	left := 0 
-	maxlen := 0 
-	for right :=0 ; right < len(s); right ++ {
-		ch := s[right] 
-		if pos,ok := last[ch]; ok && pos >= left {
-			left = pos + 1 
+	left := 0
+	maxlen := 0
+	for right := 0; right < len(s); right++ {
+		ch := s[right]
+		if pos, ok := last[ch]; ok && pos >= left {
+			left = pos + 1
 		}
 		last[ch] = right
-		len := right - left + 1 
-		if len > maxlen	{
+		len := right - left + 1
+		if len > maxlen {
 			maxlen = len
 		}
 	}
-	return  maxlen
+	return maxlen
 }
 
 // func lengthOfLongestSubstring(s string) int {
@@ -35,9 +35,9 @@ func lengthOfLongestSubstring(s string) int {
 // 		}
 // 	}
 // 	return maxlen
-    
+
 // }
 
-func main(){
+func main() {
 
 }

@@ -37,19 +37,20 @@ package main
  */
 
 type MinStack struct {
-	stack []int
+	stack    []int
 	minstack []int
 }
+
 func Constructor() MinStack {
 	return MinStack{
-		stack: []int{},
+		stack:    []int{},
 		minstack: []int{},
 	}
-    
+
 }
-func (this *MinStack) Push(value int)  {
+func (this *MinStack) Push(value int) {
 	this.stack = append(this.stack, value)
-	if len(this.stack) == 0{
+	if len(this.stack) == 0 {
 		this.minstack = append(this.minstack, value)
 		return
 	}
@@ -61,7 +62,7 @@ func (this *MinStack) Push(value int)  {
 	}
 }
 
-func (this *MinStack) Pop()  {
+func (this *MinStack) Pop() {
 	if len(this.stack) == 0 {
 		return
 	}
@@ -75,15 +76,13 @@ func (this *MinStack) Top() int {
 
 func (this *MinStack) GetMin() int {
 	return this.minstack[len(this.minstack)-1]
-    
+
 }
 
-
-func main(){
+func main() {
 	stack := Constructor()
-	stack.stack = []int{5,4}
-	stack.minstack = []int{5,4}
+	stack.stack = []int{5, 4}
+	stack.minstack = []int{5, 4}
 	stack.Push(7)
-	
 
 }
